@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle City</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+    }
+    canvas {
+      border: 2px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <button id="start-button" >Start Game</button>
+  <button id="restart-button">Restart Game</button>
+  <script type="module" src="game.js"></script>
+  <script type="module" src="loadElements.js"></script>
+    <script type="module">
+    import { onStartClick, onRestartClick } from "./loadElements.js";
+      import Game from "./game.js";
+      document.getElementById("restart-button").style.display = "none";
+    document.getElementById("start-button").onclick = onStartClick;
+    document.getElementById("restart-button").onclick = onRestartClick;
+    import Base from "./base.js";
+
+  </script>
+  <p id = "baseHP" style = "position: absolute; margin-left:-80vh; margin-top: 50vh">HP:</p>
+</body>
+</html>
